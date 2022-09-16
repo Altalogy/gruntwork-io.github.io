@@ -1,4 +1,5 @@
 .patcher {
+  // Table styles
   .table-striped {
     @media (max-width: $screen-sm-min) {
       font-size: 16px;
@@ -33,5 +34,197 @@
         }
       }
     }
+  }
+  // Slider section styles
+  // Tooltip styles
+  .patcher-tooltip {
+    max-width: 210px;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #151a21;
+    padding: 8px 12px;
+    border-radius: 22px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-127px, 38px);
+    position: absolute;
+    z-index: 2;
+  }
+  .info-icon:hover + .patcher-tooltip {
+    visibility: visible;
+    opacity: 100%;
+  }
+  .additional-info {
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 56px;
+    @media (max-width: $screen-md-min) {
+      margin-top: 32px;
+    }
+  }
+  .calculation-grid {
+    p {
+      @media (max-width: $screen-md-min) {
+        padding-bottom: 32px;
+        margin-bottom: 0px;
+        border-bottom: 2px solid rgba(15, 192, 239, 0.25);
+      }
+    }
+    h2 {
+      @media (max-width: $screen-md-min) {
+        margin-top: 26px;
+      }
+    }
+  }
+  // Slider styles
+  .slider-number-mobile {
+    display: none;
+    @media (max-width: $screen-md-min) {
+      display: block;
+      position: absolute;
+      margin: 0;
+      right: 30%;
+    }
+  }
+  .slider-text-mobile {
+    display: none;
+    @media (max-width: $screen-md-min) {
+      display: block;
+      position: absolute;
+      margin: 0;
+      bottom: 75px;
+    }
+  }
+  .progress-slider {
+    height: 20px;
+    margin: 100px 0 16px;
+    position: relative;
+    @media (max-width: $screen-md-min) {
+      margin: 70px 0 42px;
+    }
+    .progress-bar {
+      background: linear-gradient(
+        133.39deg,
+        #13cfe7 -33.78%,
+        #07a5fe 86.8%,
+        #06a2ff 86.8%,
+        #07a5fe 86.8%
+      );
+      height: 10px;
+      width: 72%;
+      position: absolute;
+      top: 0;
+      border-radius: 25px;
+    }
+    input[type="range"] {
+      outline: 0;
+      border: 0;
+      border-radius: 500px;
+      width: 100%;
+      max-width: 100%;
+      transition: box-shadow 0.2s ease-in-out;
+      // Chrome
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        & {
+          // overflow: hidden;
+          height: 9px;
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: #04bedf solid 1px;
+        }
+        &::-webkit-slider-runnable-track {
+          height: 10px;
+          -webkit-appearance: none;
+          // margin-top: -1px;
+          transition: box-shadow 0.2s ease-in-out;
+        }
+        &::-webkit-slider-thumb {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 3;
+          width: 45px;
+          height: 26px;
+          -webkit-appearance: none;
+          cursor: pointer;
+          background: linear-gradient(
+            133.39deg,
+            #13cfe7 -33.78%,
+            #07a5fe 86.8%,
+            #06a2ff 86.8%,
+            #07a5fe 86.8%
+          );
+          border-radius: 13px;
+        }
+        &:active::-webkit-slider-thumb {
+          //background: #1E2530;
+        }
+      }
+      // Firefox
+      &::-moz-range-progress {
+        background-color: linear-gradient(
+          133.39deg,
+          #13cfe7 -33.78%,
+          #07a5fe 86.8%,
+          #06a2ff 86.8%,
+          #07a5fe 86.8%
+        );
+      }
+      &::-moz-range-track {
+        background-color: linear-gradient(
+          133.39deg,
+          #13cfe7 -33.78%,
+          #07a5fe 86.8%,
+          #06a2ff 86.8%,
+          #07a5fe 86.8%
+        );
+      }
+      // IE
+      &::-ms-fill-lower {
+        background-color: linear-gradient(
+          133.39deg,
+          #13cfe7 -33.78%,
+          #07a5fe 86.8%,
+          #06a2ff 86.8%,
+          #07a5fe 86.8%
+        );
+      }
+      &::-ms-fill-upper {
+        background-color: linear-gradient(
+          133.39deg,
+          #13cfe7 -33.78%,
+          #07a5fe 86.8%,
+          #06a2ff 86.8%,
+          #07a5fe 86.8%
+        );
+      }
+    }
+  }
+  .slider-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 73.48%;
+    top: -130px;
+    transform-origin: center -10px;
+    transform: translateX(-19%);
+    width: 200px;
+    transition: margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    @media (max-width: $screen-md-min) {
+      display: none;
+    }
+    .selected-slider-number {
+      font-size: 31px;
+      line-height: 39px;
+      color: #fff;
+    }
+  }
+  input:not(:active) + .slider-number {
+    opacity: 100%;
+    margin-top: 0;
+    pointer-events: none;
   }
 }
