@@ -1,0 +1,51 @@
+<div class="row row-page-header">
+  <div class="col-xs-12">
+    <h2 style="display: flex; align-items: center">
+      Patcher
+      <label class="label-beta" style="max-height: 27px; margin: auto 12px"
+        >Beta</label
+      >
+      is just the beginning
+    </h2>
+    <div class="table-responsive">
+      <div>
+        <table class="table table-striped" style="min-width: 500px">
+          <thead>
+            <tr>
+              <th></th>
+              <th><label class="label-beta">Beta</label></th>
+              <th>
+                <label
+                  class="label-beta"
+                  style="
+                    background: linear-gradient(
+                      101.84deg,
+                      #4e8564 2.31%,
+                      #56864f 98.56%
+                    );
+                  "
+                  >Planned</label
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for package in site.data.patcher %}
+            <tr id="{{ id }}">
+              <td style="width: 27%; vertical-align: middle">
+                {{ package.name }}
+              </td>
+              <td style="width: 37%; vertical-align: middle">
+                {{ package.beta }}
+              </td>
+              <td style="width: 37%; vertical-align: middle">
+                {{ package.planned }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

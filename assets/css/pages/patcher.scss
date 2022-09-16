@@ -1,0 +1,37 @@
+.patcher {
+  .table-striped {
+    @media (max-width: $screen-sm-min) {
+      font-size: 16px;
+      margin-bottom: 0px;
+    }
+    tbody {
+      tr {
+        &:first-child {
+          td {
+            &:nth-child(2),
+            &:nth-child(3) {
+              border-top: 1px solid $input-border;
+            }
+          }
+        }
+        &:last-child {
+          td {
+            &:nth-child(2),
+            &:nth-child(3) {
+              border-bottom: 1px solid $input-border;
+            }
+          }
+        }
+        td {
+          &:nth-child(2),
+          &:nth-child(3) {
+            border-left: 1px solid $input-border;
+          }
+          &:nth-child(3) {
+            border-right: 1px solid $input-border;
+          }
+        }
+      }
+    }
+  }
+}
