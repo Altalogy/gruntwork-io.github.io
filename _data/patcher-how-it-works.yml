@@ -1,0 +1,42 @@
+- category:
+  name: withPatcher
+  items: 
+    - title: Automatically discover dependencies in your code
+      description: Run the Patcher CLI to automatically discover dependencies in your code, the versions they are at, and if new versions are available. 
+      asciinema-id: patcher-player-cast-1
+      owner: maintainer
+    - title: Release new versions with patches
+      description: Release a new version of your library with new features and bug fixes. If the new version is backward incompatible, create a patch to programmatically update your users' code to fix the incompatibility. Patches can prompt users for input too!
+      asciinema-id: patcher-player-cast-2
+      owner: maintainer
+    - title: Automatically update to new versions and apply patches
+      description: Pick which dependencies to update, what version to update to, and which patches to apply. Your code is updated automatically!
+      asciinema-id: patcher-player-cast-3
+      owner: user
+- category: 
+  name: withoutPatcher
+  items: 
+    - title: Manually discover dependencies in your code
+      description: Browse your code manually to find dependencies and the versions they are at. 
+      asciinema-id: patcher-player-cast-4
+      owner: user
+    - title: Manually discover new versions
+      description: Browse GitHub repos, release notes, Twitter announcements, and blogs to discover new releases.
+      asciinema-id: patcher-player-cast-5
+      owner: user
+    - title: Release new versions with migration guides for breaking changes
+      description: Release a new version of your library with new features and bug fixes. If the new version is backward incompatible, write up a migration guide instructing users how to fix those incompatibilities manually.
+      asciinema-id: patcher-player-cast-6
+      owner: maintainer
+    - title: Manually update dependency versions
+      description: Pick which dependencies to update and manually bump their version numbers.
+      asciinema-id: patcher-player-cast-7
+      owner: user
+    - title: Manually fix backward incompatibilities
+      description: Read migration guides and manually follow instructions to fix backward incompatibilities in your code
+      asciinema-id: patcher-player-cast-8
+      owner: user
+    - title: Deal with bugs and outages
+      description: Following migration guides manually is error prone, so you usually get things wrong and run into bugs, outages, etc
+      asciinema-id: patcher-player-cast-9
+      onwer: user

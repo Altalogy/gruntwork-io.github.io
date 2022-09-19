@@ -1,0 +1,47 @@
+<div class="row row-page-header how-it-works-section">
+    <div class="col-xs-12" style="display: flex; justify-content: center">
+        <h2>How it Works</h2>
+    </div>
+    <div class="col-xs-12 patcher-btn-wrapper">
+        <div class="patcher-toggle-btn">
+            <div onclick="showWithPatcher()" class="with-patcher active">
+                With Patcher
+            </div>
+            <div onclick="showWithoutPatcher()" class="without-patcher">
+                Without Patcher
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="section-work-with-patcher section-work-active" style="width: 100%">
+            {% for category in site.data.patcher-how-it-works %} {% for item in
+            category.items %} {% if category.name == 'withPatcher' %}
+            <div class="row-wrapper">
+                <div>
+                    <h3 style="margin-top: 0px">{{ item.title }}</h3>
+                    <p style="max-width: 42rem">{{ item.description }}</p>
+                </div>
+                <div class="asciinema-wrapper-col">
+                    <img class="patcher-icon" src="/assets/img/patcher/how-it-works-{{ item.owner }}.png" />
+                    <div id="{{item.asciinema-id}}"></div>
+                </div>
+            </div>
+            {% endif %} {% endfor %} {% endfor %}
+        </div>
+        <div class="section-work-without-patcher" style="width: 100%">
+            {% for category in site.data.patcher-how-it-works %} {% for item in
+            category.items %} {% if category.name == 'withoutPatcher' %}
+            <div class="row-wrapper">
+                <div>
+                    <h3 style="margin-top: 0px">{{ item.title }}</h3>
+                    <p style="max-width: 40rem">{{ item.description }}</p>
+                </div>
+                <div class="asciinema-wrapper-col">
+                    <img class="patcher-icon" src="/assets/img/patcher/how-it-works-{{ item.owner }}.png" />
+                    <div id="{{item.asciinema-id}}"></div>
+                </div>
+            </div>
+            {% endif %} {% endfor %} {% endfor %}
+        </div>
+    </div>
+</div>
