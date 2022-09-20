@@ -4,10 +4,10 @@
     </div>
     <div class="col-xs-12 patcher-btn-wrapper">
         <div class="patcher-toggle-btn">
-            <div onclick="toggleActiveSection()" class="with-patcher active-btn">
+            <div onclick="toggleActiveSection(1)" class="with-patcher active-btn">
                 With Patcher
             </div>
-            <div onclick="toggleActiveSection()" class="without-patcher">
+            <div onclick="toggleActiveSection(2)" class="without-patcher">
                 Without Patcher
             </div>
         </div>
@@ -47,10 +47,17 @@
 </div>
 
 <script>
-    function toggleActiveSection() {
-        document.querySelector('.section-work-without-patcher').classList.toggle('section-work-active')
-        document.querySelector('.section-work-with-patcher').classList.toggle('section-work-active')
-        document.querySelector('.with-patcher').classList.toggle('active-btn')
-        document.querySelector('.without-patcher').classList.toggle('active-btn')
+    function toggleActiveSection(id) {
+        if (id === 1) {
+            document.querySelector('.section-work-with-patcher').classList.add('section-work-active')
+            document.querySelector('.with-patcher').classList.add('active-btn')
+            document.querySelector('.section-work-without-patcher').classList.toggle('section-work-active')
+            document.querySelector('.without-patcher').classList.remove('active-btn')
+        } else {
+            document.querySelector('.section-work-with-patcher').classList.remove('section-work-active')
+            document.querySelector('.with-patcher').classList.remove('active-btn')
+            document.querySelector('.section-work-without-patcher').classList.add('section-work-active')
+            document.querySelector('.without-patcher').classList.add('active-btn')
+        }
     }
 </script>
