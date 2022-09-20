@@ -4,10 +4,10 @@
     </div>
     <div class="col-xs-12 patcher-btn-wrapper">
         <div class="patcher-toggle-btn">
-            <div onclick="showWithPatcher()" class="with-patcher active">
+            <div onclick="toggleActiveSection()" class="with-patcher active-btn">
                 With Patcher
             </div>
-            <div onclick="showWithoutPatcher()" class="without-patcher">
+            <div onclick="toggleActiveSection()" class="without-patcher">
                 Without Patcher
             </div>
         </div>
@@ -45,3 +45,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    function toggleActiveSection() {
+        document.querySelector('.section-work-without-patcher').classList.toggle('section-work-active')
+        document.querySelector('.section-work-with-patcher').classList.toggle('section-work-active')
+        document.querySelector('.with-patcher').classList.toggle('active-btn')
+        document.querySelector('.without-patcher').classList.toggle('active-btn')
+    }
+</script>

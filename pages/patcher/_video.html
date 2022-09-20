@@ -1,0 +1,24 @@
+<div class="row row-page-header">
+    <div class="col-xs-12">
+        <div>
+            <h2>See Patcher in action</h2>
+        </div>
+        <img onclick="toggleVideo()" src="/assets/img/patcher/video.png" style="cursor: pointer" />
+    </div>
+</div>
+<div class="video-wrapper">
+    <div class="close-video-btn" onclick="toggleVideo()">
+        <img src="/assets/img/patcher/close-btn-icon.png" />
+    </div>
+    <video controls class="video">
+        <source src="" type="video/mp4" />
+    </video>
+</div>
+
+<script>
+    function toggleVideo() {
+        document
+            .querySelector(".video-wrapper")
+            .classList.toggle("video-wrapper-active");
+    }
+</script>

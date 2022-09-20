@@ -39,4 +39,4 @@
     - title: Deal with bugs and outages
       description: Following migration guides manually is error prone, so you usually get things wrong and run into bugs, outages, etc
       asciinema-id: patcher-player-cast-9
-      onwer: user
+      owner: user
