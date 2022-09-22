@@ -14,7 +14,7 @@ $(function () {
     calculatedHours = calculatedUpdates * hourPerWork;
     calculatedSavedMoney = calculatedHours * salaryRate;
     $(".selected-slider-number").html(rangePercent);
-    $(".slider-number-mobile").html(rangePercent);
+    $(".selected-slider-number-mobile").html(rangePercent);
     $(".slider-number").css({
       left: (rangePercent * 100) / numberOfModulesIn2021 + "%",
     });

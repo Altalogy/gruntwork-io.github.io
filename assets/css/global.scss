@@ -1348,26 +1348,6 @@ $padding-section-vertical-desktop: 60px;
   }
 }
 
-// Hero styles for the patcher page
-.patcher .section-hero {
-  padding-top: 90px;
-  @media (max-width: $screen-md-max) {
-    padding-top: 36px;
-    padding-bottom: 0px;
-    .col-lg-7 {
-      min-height: 225px;
-    }
-  }
-}
-.floating-img-patcher {
-  position: absolute;
-  right: 0;
-  @media (max-width: $screen-md-max) {
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
 // Main content section styles on the front page
 .index-page .main .section-dark {
   background-image: url("../img/bg-content-squares.png");
