@@ -86,6 +86,12 @@
 
   // Slider section styles
   // Tooltip styles
+  .mobile-breaker {
+    display: none;
+    @media (max-width: $screen-xs-min) {
+      display: block;
+    }
+  }
   .patcher-tooltip {
     max-width: 210px;
     font-size: 15px;
@@ -102,7 +108,7 @@
     @media (max-width: $screen-sm-min) {
       min-width: 210px;
       transform: translate(-120px, 38px);
-     }
+    }
   }
 
   .info-icon:hover + .patcher-tooltip {
