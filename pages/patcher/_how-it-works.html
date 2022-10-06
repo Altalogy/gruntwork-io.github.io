@@ -1,63 +1,84 @@
 <div class="row row-page-header how-it-works-section">
-    <div class="col-xs-12" style="display: flex; justify-content: center">
+    <div class="col-xs-12">
         <h2>How it Works</h2>
     </div>
-    <div class="col-xs-12 patcher-btn-wrapper">
-        <div class="patcher-toggle-btn">
-            <div onclick="toggleActiveSection(1)" class="with-patcher active-btn">
-                With Patcher
-            </div>
-            <div onclick="toggleActiveSection(2)" class="without-patcher">
-                Without Patcher
-            </div>
-        </div>
-    </div>
+    {% for category in site.data.patcher-how-it-works %} {% for item in
+    category.items %}
     <div class="col-xs-12">
-        <div class="section-work-with-patcher section-work-active" style="width: 100%">
-            {% for category in site.data.patcher-how-it-works %} {% for item in
-            category.items %} {% if category.name == 'withPatcher' %}
-            <div class="row-wrapper">
-                <div>
-                    <h3 style="margin-top: 0px">{{ item.title }}</h3>
-                    <p style="max-width: 42rem">{{ item.description }}</p>
+        <div style="width: 100%">
+            <div>
+                <img class="patcher-icon-user" src="/assets/img/patcher/step-{{ item.step-image }}.png" />
+                <h3 style="margin-top: 0px">{{ item.title }}</h3>
+            </div>
+            <div class="asciinema-wrapper-col">
+                <div class="bar">
+                    <div class="circles-box">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
                 </div>
-                <div class="asciinema-wrapper-col">
-                    <img class="patcher-icon" src="/assets/img/patcher/how-it-works-{{ item.owner }}.png" />
-                    <div id="{{item.asciinema-id}}"></div>
+                <div id="{{item.asciinema-id}}"></div>
+            </div>
+            <div class="col-wrapper">
+                <div class="col">
+                    <div class="title">
+                        <img class="patcher-icon" src="/assets/img/patcher/with-patcher-icon@3x.png" />
+                        <h4 style="color: #03C5E7">With Patcher</h4>
+                    </div>
+                    <p class="patcher-text">{{item.with-patcher}}
+                        {% if item.step-image == 2 %}
+                    <div class="text-box">
+                        <img class="white-close-icon" src="/assets/img/patcher/white-close-icon@3x.png" />
+                        <h4 style="color: #03C5E7;">Patcher</h4>
+                        Patcher allows library maintainers to create _patches_ that programmatically
+                        update the code for anyone using that library. This is especially useful for patching end user
+                        code when a new version of the library has backward incompatible changes. </br> A patch defines
+                        the
+                        following items:<ol>
+                            <li>What versions of the repo and which modules the patch applies to.</li>
+                            <li>Inputs to prompt the user for. This allows users to customize what the patch does.</li>
+                            <li>A Docker image in which to run the patch. This Docker image should have all the tools
+                                installed that the patch uses. </li>
+                            <li>The steps the patch should take. These are shell commands that are executed in the
+                                Docker container to transform the library user's code in arbitrary ways.</li>
+                        </ol>
+                    </div>
+                    {% endif %}
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="title">
+                        <img class="patcher-icon" src="/assets/img/patcher/close-icon@3x.png" />
+                        <h4>Without Patcher</h4>
+                    </div>
+                    <p>{{item.without-patcher}}</p>
                 </div>
             </div>
-            {% endif %} {% endfor %} {% endfor %}
-        </div>
-        <div class="section-work-without-patcher" style="width: 100%">
-            {% for category in site.data.patcher-how-it-works %} {% for item in
-            category.items %} {% if category.name == 'withoutPatcher' %}
-            <div class="row-wrapper">
-                <div>
-                    <h3 style="margin-top: 0px">{{ item.title }}</h3>
-                    <p style="max-width: 40rem">{{ item.description }}</p>
-                </div>
-                <div class="asciinema-wrapper-col">
-                    <img class="patcher-icon" src="/assets/img/patcher/how-it-works-{{ item.owner }}.png" />
-                    <div id="{{item.asciinema-id}}"></div>
-                </div>
-            </div>
-            {% endif %} {% endfor %} {% endfor %}
         </div>
     </div>
+    {% endfor %} {% endfor %}
 </div>
 
 <script>
-    function toggleActiveSection(id) {
-        if (id === 1) {
-            document.querySelector('.section-work-with-patcher').classList.add('section-work-active')
-            document.querySelector('.with-patcher').classList.add('active-btn')
-            document.querySelector('.section-work-without-patcher').classList.toggle('section-work-active')
-            document.querySelector('.without-patcher').classList.remove('active-btn')
-        } else {
-            document.querySelector('.section-work-with-patcher').classList.remove('section-work-active')
-            document.querySelector('.with-patcher').classList.remove('active-btn')
-            document.querySelector('.section-work-without-patcher').classList.add('section-work-active')
-            document.querySelector('.without-patcher').classList.add('active-btn')
-        }
+    function mouseEnter() {
+        document.querySelector(".text-box").style.display = "block";
+        document.querySelector(".special-span-img").style.display = "block";
+
     }
+    function mouseLeave() {
+        document.querySelector(".text-box").style.display = "none";
+        document.querySelector(".special-span-img").style.display = "none";
+    }
+
+    window.addEventListener('load', function () {
+        if (window.innerWidth > 1200) {
+            document.getElementById("special-span").addEventListener("mouseenter", mouseEnter);
+            document.getElementById("special-span").addEventListener("mouseleave", mouseLeave);
+        }
+        else {
+            document.getElementById("special-span").addEventListener("click", mouseEnter);
+            document.querySelector(".white-close-icon").addEventListener("click", mouseLeave);
+        }
+    })
 </script>
