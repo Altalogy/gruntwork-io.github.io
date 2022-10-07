@@ -61,24 +61,27 @@
 </div>
 
 <script>
-    function mouseEnter() {
-        document.querySelector(".text-box").style.display = "block";
-        document.querySelector(".special-span-img").style.display = "block";
-
+    let screenMdMin = 992
+    function showTooltip() {
+        document.querySelector(".text-box").classList.add("text-box-active");
+        if (window.innerWidth > screenMdMin) {
+            document.querySelector(".special-span-img").style.display = "block";
+        }
     }
-    function mouseLeave() {
-        document.querySelector(".text-box").style.display = "none";
+
+    function hideTooltip() {
+        document.querySelector(".text-box").classList.remove("text-box-active");
         document.querySelector(".special-span-img").style.display = "none";
     }
 
     window.addEventListener('load', function () {
-        if (window.innerWidth > 1200) {
-            document.getElementById("special-span").addEventListener("mouseenter", mouseEnter);
-            document.getElementById("special-span").addEventListener("mouseleave", mouseLeave);
+        if (window.innerWidth > screenMdMin) {
+            document.getElementById("special-span").addEventListener("mouseenter", showTooltip);
+            document.getElementById("special-span").addEventListener("mouseleave", hideTooltip);
         }
         else {
-            document.getElementById("special-span").addEventListener("click", mouseEnter);
-            document.querySelector(".white-close-icon").addEventListener("click", mouseLeave);
+            document.getElementById("special-span").addEventListener("click", showTooltip);
+            document.querySelector(".white-close-icon").addEventListener("click", hideTooltip);
         }
     })
 </script>
