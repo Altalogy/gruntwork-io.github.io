@@ -1,6 +1,6 @@
 - name: Yevgeniy ("Jim") Brikman
   url: "https://www.ybrikman.com"
-  title: Co-founder
+  title: Co-founder and CEO
   image: /assets/img/headshots/jim.jpg
   bio: |
     Jim is the author of two books published by O’Reilly Media: <i><a href="https://www.hello-startup.net">Hello,
@@ -10,7 +10,7 @@
 
 - name: Josh Padnick
   url: "https://joshpadnick.com"
-  title: Co-founder
+  title: Co-founder and CPO
   image: /assets/img/headshots/josh.jpg
   bio: |
     Josh is the author of the definitive
@@ -36,23 +36,6 @@
   image: /assets/img/headshots/monica-chun.jpg
   bio: |
     Monica has worked in Finance for 15+ years. Her career spans investment banking, corporate financial planning, and small business financial management. At Gruntwork, she oversees financial and accounting functions and works closely with management on financial strategy and planning. In addition to building sophisticated (but usable) financial models, she also enjoys travelling,  volunteering in community organizations, and has recently taken up tennis.
-
-- name: Yori Yano
-  url: "https://www.linkedin.com/in/yoriyasu-yano-9030721b"
-  title: Principal Software Engineer
-  image: /assets/img/headshots/yori.jpg
-  bio: |
-    Yori is an experienced software engineer passionate about building tools
-    to make developers’ lives easier. Prior to joining Gruntwork, Yori was a
-    founding team member at Captricity, a company building a secure digital
-    automation solution for enterprises operating in highly regulated
-    industries. During his time there, he built out Captricity’s core digitization
-    platform from a research prototype. He eventually became specialized in
-    Site Reliability Engineering and successfully led the team to
-    materialize a 10x improvement in the throughput of the digitization
-    platform. In his free time, he likes to tinker with his home datacenter
-    (comprised of a mix of SBCs) and scout for new technologies to learn
-    (currently CUDA and GPGPU programming).
 
 - name: Rob Morgan
   url: "https://robmorgan.id.au/about/"
@@ -111,22 +94,6 @@
   bio: |
     Taylor is a Product Manager with a passion for bridging the gap between customer needs and business. She previously worked for a Fortune 6 company where she focused on facilitating Product Management during a digital transformation. Extremely detail oriented and creative, in her free time you can find her tackling various interior design projects at home, or spending time with her fiancé or her dog, Lewis.
 
-- name: Rho Sang
-  url: "https://angel.co/u/rhosang"
-  title: Principal Software Engineer
-  image: /assets/img/headshots/rho.png
-  bio: |
-    Rho has been coding since they were a kid and is naturally drawn to
-    problems that require seeing how everything fits together. Their background
-    in Cognitive Science and experience design informs the humanistic way they
-    approach problems. Formerly at Elastic, they built the Upgrade Assistant to
-    help customers automate migrating petabytes of data. Equipped with over a
-    decade of experience across a variety of verticals and startup stages, now
-    they’re keen to solve the foundational problems in automating infrastructure.
-    They want to make people’s lives easier across the board, occasionally using
-    their training in therapeutic domains to rehabilitate those in pain. They also
-    love open water swimming, ride a fixed-gear bike avidly, and run rather slowly.
-
 - name: Eben Eliason
   url: "https://ebeneliason.com"
   title: Principal Product Designer
@@ -142,18 +109,6 @@
     communication by bringing in-person social cues to virtual meetings. He's
     also a hiker, boulderer, and board game enthusiast who dabbles in game
     design himself.
-
-- name: Ina Stoyanova
-  url: "https://www.linkedin.com/in/ina-stoyanova/"
-  title: Software Engineer
-  image: /assets/img/headshots/ina.png
-  bio: |
-    Ina is a software engineer based in London but originally from Bulgaria.
-    She has previously been consulting in different industries such as
-    fintech, recruitment and cosmetics. Ina is all about learning and sharing
-    everything DevSecOps, and chasing endlessly the perfect engineering workflow.
-    She is currently pursuing an MSc in Software & Systems Security. In her spare time
-    Ina can be found taking photos somewhere with golden beaches, learning guitar or training martial arts.
 
 - name: Ana Krivokapić
   url: "https://www.linkedin.com/in/ana-krivokapic/"
@@ -191,6 +146,7 @@
     probably reading a history book, learning a language, or inventing ridiculous nicknames for her dogs.
 
 - name: Ian Bowers
+  url: "https://www.linkedin.com/in/ian-bowers-08b21820b/"
   title: Sales Engineer
   image: /assets/img/headshots/ian-bowers.jpg
   bio: |
@@ -204,9 +160,57 @@
   title: Senior Software Engineer
   image: /assets/img/headshots/james-kwon.jpg
   bio: |
-    James is a Software Engineer in Toronto, Ontario. Before working at Gruntwork, 
-    he was a backend engineer in various big tech companies. James is passionate about learning. 
+    James is a Software Engineer in Toronto, Ontario. Before working at Gruntwork,
+    he was a backend engineer in various big tech companies. James is passionate about learning.
     Outside of work, James enjoys racket sports (e.g., Badminton, Tennis, Table-Tennis).
+
+- name: Sarah Stewart
+  url: "https://www.linkedin.com/in/sarah-stewart-sdm/"
+  title: Senior Engineering Manager
+  image: /assets/img/headshots/sarah-stewart.png
+  bio: |
+    Sarah’s career in technology has spanned several industries and over the past 20 years a variety of roles from full stack software developer to various leadership positions. Her greatest passion is for helping individuals, teams, and companies in the technology space to know their value and potential, and put it to greatest use. She is particularly excited about working on projects that make peoples’ lives better and has a special soft spot for making developers and leaders lives better.
+
+- name: Beth Adele Long
+  url: https://bethadele.io/
+  title: Senior Product Manager
+  image: /assets/img/headshots/beth-long.jpeg
+  bio: |
+    Beth is a software engineer turned product manager who loves helping technology workers navigate complexity. She has written and spoken about DevOps, SRE, and resilience engineering, with a special passion for incident management and analysis. She often wanders, and is happily based in Portland, Oregon.
+
+- name: Jason Griffin
+  url: https://www.linkedin.com/in/griffinjason/
+  title: Principal Product Manager
+  image: /assets/img/headshots/headshot-jason-griffin.jpg
+  bio: |
+    Jason is an engineer, leader and consultant with nearly 30 years of industry experience spanning sectors as diverse as satellite remote sensing and casino gaming. During this time he’s lived and worked on four continents, developing technology products for household names including TomTom, IKEA and Nike. Prior to Gruntwork, Jason led the product development and customer engineering for a Dutch startup that was acquired by CircleCI in 2021. In his free time, Jason is a keen street photographer and collector of analogue cameras.
+
+- name: Andrew Ellison
+  url: "https://www.linkedin.com/in/ellisonandrew/"
+  title: Software Engineer
+  image: /assets/img/headshots/andrew-ellison.jpg
+  bio: |
+    Andrew is a Software Engineer in Saint Louis, MO. Prior to Gruntwork, he developed web applications for various
+    startups, primarily in Ad-tech. Andrew is happiest when solving problems, especially finding solutions that make
+    other's lives easier. Outside of work he enjoys swimming, 3d printing, and spending time with his
+    dog, cats, and snake.
+
+- name: Ryan Russell
+  url: "https://www.linkedin.com/in/russerya/"
+  title: Software Engineer
+  image: /assets/img/headshots/ryan-russell.jpg
+  bio: |
+    Ryan is a Software Engineer based in Sacramento, California. Before joining Gruntwork he spent several years
+    in consulting delivering cloud and DevOps solutions to a wide range of companies. Ryan has a passion for technology, 
+    loves tinkering, and his spare time he enjoys working on smarthome projects, lighting projects, and cars.
+
+- name: Max Moon
+  url: "https://www.linkedin.com/in/maxwelljmoon/"
+  title: Principal Software Engineer
+  image: /assets/img/headshots/max.jpg
+  bio: |
+    Max is a Software Engineer based in San Diego, California. Prior to Gruntwork he spent time working in DevOps and Software Engineering roles at various startups.
+    Max has a passion for learning and enjoys reading about and researching technical topics. Outside of work he spends his time playing music or making things in his workshop.
 
 - name: Possibly You!
   url: /careers
