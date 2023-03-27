@@ -32,10 +32,10 @@
         background-color: #191f29;
       }
     }
-    
-    .highlighted{
+
+    .highlighted {
       color: #ee4f5d;
-      margin: 0 2px;   
+      margin: 0 2px;
       font-weight: normal;
       letter-spacing: 1.8px;
     }
@@ -57,11 +57,12 @@
       margin-bottom: 50px;
       padding-top: 30px;
       border-top: 2px solid rgba(15, 192, 239, 0.25);
+
       .feature-techstack {
         img {
           margin-right: 2px;
         }
-  
+
         .feature-more-icons {
           padding: 0 5px;
         }
@@ -77,4 +78,8 @@
       }
     }
   }
+}
+
+.patcher-link {
+  text-decoration: none !important;
 }

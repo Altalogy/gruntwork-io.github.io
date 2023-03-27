@@ -1,6 +1,6 @@
 - name: Supported languages & tools
   beta: Terraform, Terragrunt
-  planned: Go, Python, Bash, Ruby, Java
+  planned: Go, Bash
 - name: User Experience
   beta: CLI-only
   planned: CLI and web
@@ -16,4 +16,6 @@
 - name: Availability
   beta: Part of the Gruntwork Subscription
   planned: Standalone product
-  
+- name: Supported modules
+  beta: Gruntwork authored modules
+  planned: Gruntwork modules and your own modules

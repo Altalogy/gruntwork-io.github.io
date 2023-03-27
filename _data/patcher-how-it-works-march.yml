@@ -1,19 +1,13 @@
-- items: 
+- items:
   - title: Automatically discover dependencies in your code
     step-image: 1
     with-patcher: Run the Patcher CLI to automatically discover dependencies in your code, the versions they are at, and if new versions are available.
     without-patcher: You have to manually scan your code for dependencies, manually track which versions they are at, and manually look up if new versions are available.
     asciinema-id: patcher-player-cast-1
-    owner: maintainer
-  - title: Release new versions with patches
-    step-image: 2
-    with-patcher: Release a new version of your library with new features and bug fixes. If the new version is backward incompatible, create a <span id="special-span"><img class="special-span-img" src="/assets/img/patcher/rectangle-icon.png"/>patch</span> to programmatically update your users' code to fix the incompatibility. Patches can prompt users for input too!
-    without-patcher: Release a new version of your library with new features and bug fixes. If the new version is backward incompatible, write up a migration guide that tells the user how to manually update their code to deal with the incompatibility.
-    asciinema-id: patcher-player-cast-2
-    owner: maintainer
+    owner: user
   - title: Hassle-free updates with step-by-step instructions and automatic patching
-    step-image: 3
+    step-image: 2
     with-patcher: Choose the desired module and its corresponding version for an update. Patcher automatically modifies your code, applying necessary patches. You will be guided through any necessary manual changes.
     without-patcher: Update to new versions manually. If the new version is backward incompatible, go searching for a migration guide, and follow the steps to update your code manually. Reply
-    asciinema-id: patcher-player-cast-3
+    asciinema-id: patcher-player-cast-2
     owner: user
