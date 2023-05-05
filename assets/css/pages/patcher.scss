@@ -1,4 +1,5 @@
 .patcher {
+
   // Hero styles for the patcher page
   .section-hero {
     padding-top: 90px;
@@ -6,6 +7,7 @@
     @media (max-width: $screen-md-max) {
       padding-top: 36px;
       padding-bottom: 0px;
+
       .col-lg-7 {
         min-height: 225px;
       }
@@ -22,288 +24,6 @@
       transform: translate(-50%);
       max-height: 380px;
     }
-  }
-
-  // Table styles
-  .header-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 43px;
-    margin-top: 53px;
-
-    @media (max-width: $screen-sm-min) {
-      margin-bottom: 16px;
-      margin-top: 20px;
-    }
-
-    h2 {
-      margin-bottom: 0;
-      margin-top: 0;
-      &:last-child {
-        a {
-          display: none;
-        }
-      }
-    }
-
-    .label-beta {
-      margin: 0 12px;
-    }
-  }
-
-  .table-striped {
-    @media (max-width: $screen-sm-min) {
-      font-size: 16px;
-      margin-bottom: 0px;
-    }
-
-    tbody {
-      tr {
-        &:first-child {
-          td {
-            &:nth-child(2),
-            &:nth-child(3) {
-              border-top: 1px solid $input-border;
-            }
-          }
-        }
-
-        &:last-child {
-          td {
-            &:nth-child(2),
-            &:nth-child(3) {
-              border-bottom: 1px solid $input-border;
-            }
-          }
-        }
-
-        td {
-          &:nth-child(2),
-          &:nth-child(3) {
-            border-left: 1px solid $input-border;
-          }
-
-          &:nth-child(3) {
-            border-right: 1px solid $input-border;
-          }
-        }
-      }
-    }
-  }
-
-  // Slider section styles
-  // Tooltip styles
-  .mobile-breaker {
-    display: none;
-
-    @media (max-width: $screen-xs-min) {
-      display: block;
-    }
-  }
-
-  .patcher-tooltip {
-    max-width: 210px;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: center;
-    background-color: #151a21;
-    padding: 8px 12px;
-    border-radius: 22px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-127px, 38px);
-    position: absolute;
-    z-index: 2;
-
-    @media (max-width: $screen-sm-min) {
-      min-width: 210px;
-      transform: translate(-120px, 38px);
-    }
-  }
-
-  .info-icon:hover+.patcher-tooltip {
-    visibility: visible;
-    opacity: 100%;
-  }
-
-  .additional-info {
-    font-size: 15px;
-    line-height: 19px;
-    margin-top: 56px;
-
-    @media (max-width: $screen-md-min) {
-      margin-top: 32px;
-    }
-  }
-
-  .calculation-grid {
-    p {
-      @media (max-width: $screen-md-min) {
-        padding-bottom: 32px;
-        margin-bottom: 0px;
-        border-bottom: 2px solid rgba(15, 192, 239, 0.25);
-      }
-    }
-
-    h2 {
-      @media (max-width: $screen-md-min) {
-        margin-top: 26px;
-      }
-    }
-  }
-
-  // Slider styles
-  .selected-slider-number-mobile {
-    display: none;
-
-    @media (max-width: $screen-md-min) {
-      display: block;
-      margin-right: 5px;
-      font-size: 26px;
-      color: #ffffff;
-    }
-  }
-
-  .slider-text-mobile {
-    display: none;
-
-    @media (max-width: $screen-md-min) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      margin: 0;
-      bottom: 100px;
-      line-height: 0;
-    }
-  }
-
-  .progress-slider {
-    height: 20px;
-    margin: 100px 0 16px;
-    position: relative;
-
-    @media (max-width: $screen-md-min) {
-      margin: 70px 0 42px;
-    }
-
-    .progress-bar {
-      background: linear-gradient(133.39deg,
-          #13cfe7 -33.78%,
-          #07a5fe 86.8%,
-          #06a2ff 86.8%,
-          #07a5fe 86.8%);
-      height: 10px;
-      width: 72%;
-      position: absolute;
-      top: 0;
-      border-radius: 25px;
-    }
-
-    input[type="range"] {
-      outline: 0;
-      border: 0;
-      border-radius: 500px;
-      width: 100%;
-      max-width: 100%;
-      transition: box-shadow 0.2s ease-in-out;
-
-      // Chrome
-      @media screen and (-webkit-min-device-pixel-ratio: 0) {
-        & {
-          height: 9px;
-          -webkit-appearance: none;
-          background-color: transparent;
-          border: #04bedf solid 1px;
-        }
-
-        &::-webkit-slider-runnable-track {
-          height: 10px;
-          -webkit-appearance: none;
-          transition: box-shadow 0.2s ease-in-out;
-        }
-
-        &::-webkit-slider-thumb {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 3;
-          width: 45px;
-          height: 26px;
-          -webkit-appearance: none;
-          cursor: pointer;
-          background-image: url("../img/patcher/slider-btn.svg");
-          background-position: center center;
-          background-repeat: no-repeat;
-          border-radius: 13px;
-        }
-      }
-
-      // Firefox
-      &::-moz-range-progress {
-        background-color: linear-gradient(133.39deg,
-            #13cfe7 -33.78%,
-            #07a5fe 86.8%,
-            #06a2ff 86.8%,
-            #07a5fe 86.8%);
-      }
-
-      &::-moz-range-track {
-        background-color: linear-gradient(133.39deg,
-            #13cfe7 -33.78%,
-            #07a5fe 86.8%,
-            #06a2ff 86.8%,
-            #07a5fe 86.8%);
-      }
-
-      // IE
-      &::-ms-fill-lower {
-        background-color: linear-gradient(133.39deg,
-            #13cfe7 -33.78%,
-            #07a5fe 86.8%,
-            #06a2ff 86.8%,
-            #07a5fe 86.8%);
-      }
-
-      &::-ms-fill-upper {
-        background-color: linear-gradient(133.39deg,
-            #13cfe7 -33.78%,
-            #07a5fe 86.8%,
-            #06a2ff 86.8%,
-            #07a5fe 86.8%);
-      }
-    }
-  }
-
-  .slider-number {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    left: 73.48%;
-    top: -130px;
-    transform-origin: center -10px;
-    transform: translateX(-19%);
-    width: 200px;
-    transition: margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
-
-    @media (max-width: $screen-md-min) {
-      display: none;
-    }
-
-    .selected-slider-number {
-      font-size: 31px;
-      line-height: 39px;
-      color: #fff;
-    }
-  }
-
-  input:not(:active)+.slider-number {
-    opacity: 100%;
-    margin-top: 0;
-    pointer-events: none;
   }
 
   //How-it-works section
@@ -392,12 +112,13 @@
 
     .patcher-text {
       position: relative;
+      color: #FFFFFF;
 
       span {
         border-bottom: dotted 1px #bfbfbf;
         cursor: pointer;
         position: relative;
-        
+
         img {
           position: absolute;
           left: 50%;
@@ -519,6 +240,73 @@
           }
         }
       }
+    }
+  }
+
+
+  //Early access section
+  .early-access-section {
+    background-color: rgba(3, 197, 231, 0.1);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+
+    .decoration-icon {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      max-height: 47px;
+    }
+
+    .header-early-access {
+      font-size: 46px;
+      line-height: 126%;
+      margin: 0 0 24px;
+      display: inline-flex;
+      align-items: flex-end;
+      text-align: center;
+      position: relative;
+
+      @media (max-width: $screen-sm-min) {
+        font-size: 32px;
+        text-align: center;
+
+      }
+
+      br {
+        display: none;
+
+        @media (max-width: $screen-sm-min) {
+          display: block;
+        }
+      }
+
+      .label-beta-xxl {
+        min-height: 36px;
+        font-size: 21px;
+        padding: 5px 11px;
+        margin-left: 14px;
+        margin-bottom: 10px;
+
+        @media (max-width: $screen-sm-min) {
+          min-height: 21px;
+          max-height: 21px;
+          font-size: 12px;
+          padding: 3px 6px;
+          position: absolute;
+          right: -5px;
+        }
+      }
+
+    }
+
+    p {
+      color: #FFFFFF;
+      max-width: 550px;
+      text-align: center;
     }
   }
 

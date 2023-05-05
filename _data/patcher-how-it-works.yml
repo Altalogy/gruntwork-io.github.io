@@ -8,7 +8,7 @@
   - title: Hassle-free updates with step-by-step instructions and automatic patching
     step-image: 2
     with-patcher: Choose the desired module and its corresponding version for an update. Patcher automatically modifies your code, applying necessary patches. You will be guided through any necessary manual changes.
-    without-patcher: Update to new versions manually. If the new version is backward incompatible, go searching for a migration guide, and follow the steps to update your code manually. Reply
+    without-patcher: Update to new versions manually. If the new version is backward incompatible, go searching for a migration guide, and follow the steps to update your code manually.
     main-image: patcher-player-cast-2
     owner: user
     

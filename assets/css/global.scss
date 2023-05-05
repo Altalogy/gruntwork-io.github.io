@@ -318,6 +318,7 @@ label {
 
 .form-control {
   border-width: 2px;
+  border-radius: 4px;
 }
 
 .radio label,
@@ -1935,12 +1936,13 @@ code {
   height: 17px;
   left: 0;
   margin-left: -20px;
-  border: 2px solid #194c5f;
+  border: 2px solid #284B5D;
   border-radius: 0;
   background-color: #242e3b;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  border-radius: 3px;
 }
 .checkbox label::after {
   display: inline-block;
@@ -1950,10 +1952,12 @@ code {
   left: 0;
   top: 0;
   margin-left: -20px;
-  padding-left: 3px;
-  padding-top: 1px;
+  padding-left: 1px;
   font-size: 11px;
-  color: $brand-success;
+  color: white;
+  background-color: $btn-getademo-color;
+  border: solid 1px $btn-getademo-color;
+  border-radius: 3px;
   line-height: 1.4;
 }
 .checkbox input[type="checkbox"],
@@ -1964,8 +1968,6 @@ code {
 }
 .checkbox input[type="checkbox"]:focus + label::before,
 .checkbox input[type="radio"]:focus + label::before {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .checkbox input[type="checkbox"]:checked + label::after,
@@ -2267,6 +2269,59 @@ input[type="radio"] .styled:checked + label::after {
     padding-left: 7px;
     padding-top: 5px;
   }
+}
+
+// Patcher form styles
+.radios-container {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  @media (max-width: $screen-md-max) {
+    flex-wrap: wrap;
+  }
+}
+
+.radios-container li {
+  float: left;
+  margin: 0 8px 0 0;
+  min-width: 80px;
+  max-width: 80px;
+  height: 40px;
+  position: relative;
+}
+
+.radios-container label,
+.radios-container input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.radios-container input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.radios-container input[type="radio"]:checked+label,
+.Checked+label {
+  background: linear-gradient(133.39deg, #13CFE7 -33.78%, #07A5FE 86.8%, #06A2FF 86.8%, #07A5FE 86.8%);
+  color: #FFFFFF;
+}
+
+.radios-container label {
+  background: #262E3A;
+  color: #90959E;
+  cursor: pointer;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  line-height: 100%;
 }
 
 ////// Youtube video
@@ -3216,3 +3271,4 @@ input[type="number"]::-webkit-outer-spin-button {
 .table-responsive-border-fix {
   border: 1px solid transparent;
 }
+
