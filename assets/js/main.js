@@ -8619,100 +8619,100 @@ $(function () {
 
 
 
-/* patcher form - I only changed id's and functions name's but it does not catch the button actions */
-// $(function () {
-//   var submitButton2 = $("#submit-button-patcher");
-//   var form2 = $("#patcher-form");
-//   var next2 = $("#_next_patcher");
-//   var inCall2 = false;
+/* patcher form */
+$(function () {
+  var submitButton2 = $("#submit-button-patcher");
+  var form2 = $("#patcher-form");
+  var next2 = $("#_next_patcher");
+  var inCall2 = false;
 
-//   var validateForm2 = function () {
-//     console.log('lala')
-//     var isValid = true;
 
-//     clearErrors2();
+  var validateForm2 = function () {
+    var isValid = true;
 
-//     form2.find("[required]").each(function (index, el) {
-//       if (!$(el).val()) {
-//         isValid = false;
-//         showInputError2(el);
-//         showFormError2("Please fill in all required fields");
-//       }
-//     });
+    clearErrors2();
 
-//     return isValid;
-//   };
+    form2.find("[required]").each(function (index, el) {
+      if (!$(el).val()) {
+        isValid = false;
+        showInputError2(el);
+        showFormError2("Please fill in all required fields");
+      }
+    });
 
-//   var showFormError2 = function (message) {
-//     $("#error-message-patcher").html(
-//       '<h3 class="text-danger text-center">' + message + "</h3>"
-//     );
-//   };
+    return isValid;
+  };
 
-//   var showInputError2 = function (el) {
-//     $(el).closest(".form-group").addClass("has-error");
-//   };
+  var showFormError2 = function (message) {
+    $("#error-message-patcher").html(
+      '<h3 class="text-danger text-center">' + message + "</h3>"
+    );
+  };
 
-//   var clearErrors2 = function () {
-//     $("#error-message-patcher").html("");
-//     form2.find("*").removeClass("has-error");
-//   };
+  var showInputError2 = function (el) {
+    $(el).closest(".form-group").addClass("has-error");
+  };
 
-//   var submitForm2 = function (e) {
-//     e.preventDefault();
-//     if (inCall2) {
-//       return;
-//     }
-//     inCall2 = true;
+  var clearErrors2 = function () {
+    $("#error-message-patcher").html("");
+    form2.find("*").removeClass("has-error");
+  };
 
-//     var url = form2.prop("action");
-//     var data = serialize(form2.get(0), { hash: true });
-//     var redirect = next2.val();
+  var submitForm2 = function (e) {
+    e.preventDefault();
+    if (inCall2) {
+      return;
+    }
+    inCall2 = true;
 
-//     if (validateForm2()) {
-//       grecaptcha.ready(function () {
-//         grecaptcha
-//           .execute("", {
-//             action: "submit",
-//           })
-//           .then(function (token) {
-//             data["g-recaptcha-response"] = token;
-//             submitToFormSpree2(url, data, redirect);
-//           });
-//       });
-//     } else {
-//       inCall2 = false;
-//     }
-//   };
+    var url = form2.prop("action");
+    var data = serialize(form2.get(0), { hash: true });
+    var redirect = next2.val();
 
-//   var submitToFormSpree2 = function (url, data, redirect) {
-//     submitButton2.html("Sending...");
-//     submitButton2.prop("disabled", true);
+    if (validateForm2()) {
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LcXFLoZAAAAAHVaImPgU3xGnBmyY-lwQ6sHllGN", {
+            action: "submit",
+          })
+          .then(function (token) {
+            data["g-recaptcha-response"] = token;
+            submitToFormSpree2(url, data, redirect);
+          });
+      });
+    } else {
+      inCall2 = false;
+    }
+  };
 
-//     var postParams = {
-//       url: url,
-//       type: "POST",
-//       data: data,
-//       dataType: "json",
-//     };
+  var submitToFormSpree2 = function (url, data, redirect) {
+    submitButton2.html("Sending...");
+    submitButton2.prop("disabled", true);
 
-//     $.ajax(postParams)
-//       .done(function () {
-//         inCall2 = false;
-//         window.location.replace(redirect);
-//       })
-//       .fail(function (error) {
-//         showFormError2(
-//           "Oops, something went wrong! Please try again. If the issue persists please email us directly at info@gruntwork.io"
-//         );
-//         inCall2 = false;
-//         submitButton2.html("Submit");
-//         submitButton2.prop("disabled", false);
-//       });
-//   };
+    var postParams = {
+      url: url,
+      type: "POST",
+      data: data,
+      dataType: "json",
+    };
 
-//   submitButton2.on("click", submitForm2);
-// });
+    $.ajax(postParams)
+      .done(function () {
+        inCall2 = false;
+        window.location.replace(redirect);
+      })
+      .fail(function (error) {
+        showFormError2(
+          "Oops, something went wrong! Please try again. If the issue persists please email us directly at info@gruntwork.io"
+        );
+        inCall2 = false;
+        submitButton2.html("Submit");
+        submitButton2.prop("disabled", false);
+      });
+  };
+
+  submitButton2.on("click", submitForm2);
+});
 
 /* Ref Arch */
 $("#ref-arch-accordion").on("show.bs.collapse", function (event) {
