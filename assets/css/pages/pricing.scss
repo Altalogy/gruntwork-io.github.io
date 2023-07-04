@@ -449,3 +449,31 @@
 #add-ons-table td {
   padding: 0px 15px;
 }
+
+.pricing-div {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6); 
+  position: sticky;
+  bottom: 100px;
+  transform: translateY(100px);
+  transition: ease;
+}
+
+.pricing-div-visible {
+  display: block !important;
+  transform: translateY(0);
+  visibility: visible;
+  bottom: 0;
+  @media screen and (max-width: $screen-md) {
+    visibility: hidden;
+    display: none;
+    }
+}
+
+.pricing-card.dark {
+  background-color: rgba(0,0,0,1);
+  opacity: 100%;
+  @media screen and (max-width: $screen-md) {
+    background-color: #222932;
+  }
+}

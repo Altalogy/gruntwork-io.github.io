@@ -8983,3 +8983,46 @@ function generateUUID() {
     return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
   });
 }
+
+//pricing
+(function($) {
+  if ($("body.pricing").length) {
+    $(document).ready(function() {
+
+      function showPricing() {
+        $('.pricing-div').addClass('pricing-div-visible');
+        $('.pricing-card').addClass('dark');
+      }
+    
+      function hidePricing() {
+        $('.pricing-div').removeClass('pricing-div-visible');
+        $('.pricing-card').removeClass('dark');
+      }
+    
+      $(window).on('scroll', function() {
+        const windowHeight = $(window).height();
+        const scrollTop = $(window).scrollTop();
+    
+        const $firstHr = $('hr.with-margin:first-child');
+        if ($firstHr.length > 0) {
+          const firstHrPosition = $firstHr.offset().top;
+          if (firstHrPosition - scrollTop <= windowHeight * 0.5) {
+            showPricing();
+          }  {
+            hidePricing();
+          }
+        }
+    
+        const $lastHr = $('hr.with-margin:last');
+        if ($lastHr.length > 0) {
+          const lastHrPosition = $lastHr.offset().top;
+          if (lastHrPosition - scrollTop <= windowHeight * 0.5) {
+            hidePricing();
+          } else {
+            showPricing();
+          }
+        }
+      });
+    });
+  }
+})(window.jQuery);
