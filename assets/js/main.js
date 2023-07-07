@@ -8984,43 +8984,96 @@ function generateUUID() {
   });
 }
 
-//pricing
+// //pricing
+
+
+
+
+// (function($) {
+//   if ($("body.pricing").length) {
+//     $(document).ready(function() {
+//       function showPricing() {
+//         $('.pricing-div').addClass('pricing-div-visible');
+//         $('.pricing-card').addClass('dark');
+//       }
+
+//       function hidePricing() {
+//         $('.pricing-div').removeClass('pricing-div-visible');
+//         $('.pricing-card').removeClass('dark');
+//       }
+
+//       // const options = {
+//       //   threshold: 0.2 // Adjust this threshold as needed
+//       // };
+
+//       const options = {
+//         threshold: [0.5] // Adjust these thresholds as needed
+//       };
+
+//       const observerAbove = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//             hidePricing();
+//           } else {
+//             showPricing();
+//           }
+//         });
+//       }, options);
+
+//       const observerBelow = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//             showPricing();
+//           } else {
+//             hidePricing();
+//           }
+//         });
+//       }, options);
+
+//       const $secondUl = $('.plans-features ul:nth-child(2)');
+//       const $lastUl = $('.plans-features ul:nth-child(6)');
+//       observerAbove.observe($secondUl[0]);
+//       observerBelow.observe($lastUl[0]);
+//     });
+//   }
+// })(window.jQuery);
+
+
 (function($) {
   if ($("body.pricing").length) {
     $(document).ready(function() {
-
       function showPricing() {
         $('.pricing-div').addClass('pricing-div-visible');
         $('.pricing-card').addClass('dark');
       }
-    
+
       function hidePricing() {
         $('.pricing-div').removeClass('pricing-div-visible');
         $('.pricing-card').removeClass('dark');
       }
-    
+
       $(window).on('scroll', function() {
-        const windowHeight = $(window).height();
         const scrollTop = $(window).scrollTop();
-    
-        const $firstHr = $('hr.with-margin:first-child');
-        if ($firstHr.length > 0) {
-          const firstHrPosition = $firstHr.offset().top;
-          if (firstHrPosition - scrollTop <= windowHeight * 0.5) {
-            showPricing();
-          }  {
-            hidePricing();
-          }
-        }
-    
-        const $lastHr = $('hr.with-margin:last');
-        if ($lastHr.length > 0) {
-          const lastHrPosition = $lastHr.offset().top;
-          if (lastHrPosition - scrollTop <= windowHeight * 0.5) {
-            hidePricing();
-          } else {
-            showPricing();
-          }
+        const windowHeight = $(window).height();
+        
+        const $secondUl = $('.plans-features ul:nth-child(2)');
+        const secondUlPosition = $secondUl.offset().top;
+        const secondUlHeight = $secondUl.height();
+
+        const $lastUl = $('.plans-features ul:last');
+        const lastUlPosition = $lastUl.offset().top;
+        const lastUlHeight = $lastUl.height();
+        
+        const threshold1 = 0.01; // Adjust this threshold as needed
+        const threshold2 = 0.6; // Adjust this threshold as needed
+
+        if (
+          scrollTop <= secondUlPosition + secondUlHeight - windowHeight * threshold2 ||
+          scrollTop >= lastUlPosition + lastUlHeight - windowHeight * (1 - threshold1)
+        ) {
+          hidePricing();
+        } else {
+          showPricing();
         }
       });
     });
